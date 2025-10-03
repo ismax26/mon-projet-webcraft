@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebCraft Solutions - Contact</title>
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -25,18 +24,49 @@
     <p>Nous serons ravis d’échanger avec vous.</p>
   </section>
 
-  <section class="container">
-    <h2 class="section-title">Formulaire de contact</h2>
-    <form>
-      <input type="text" placeholder="Votre nom" style="width:100%;padding:10px;margin-bottom:10px;border-radius:10px;border:1px solid #ccc;">
-      <input type="email" placeholder="Votre email" style="width:100%;padding:10px;margin-bottom:10px;border-radius:10px;border:1px solid #ccc;">
-      <textarea placeholder="Votre message" style="width:100%;padding:10px;margin-bottom:10px;border-radius:10px;border:1px solid #ccc;"></textarea>
-      <button type="submit" class="button">Envoyer</button>
-    </form>
+  <section class="contact container">
+    <div class="contact-wrapper">
+      <!-- Informations -->
+      <div class="contact-info">
+        <h3>Nos informations</h3>
+        <p><strong>Adresse :</strong> 123 Rue du Web, 75000 Paris</p>
+        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+        <p><strong>Email :</strong> contact@webcraft.fr</p>
+        <p><strong>Horaires :</strong> Lun - Ven : 9h - 18h</p>
+        <div class="socials">
+          <a href="#">Twitter</a> | 
+          <a href="#">LinkedIn</a> | 
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Votre email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="button">Envoyer</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 MonSite - Tous droits réservés</p>
+    <p>&copy; <span id="year"></span> WebCraft Solutions - Tous droits réservés</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
